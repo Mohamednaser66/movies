@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie/core/assets_manger.dart';
+import 'package:movie/core/routes_manger.dart';
 import 'package:movie/presentation/on_boarding/widget/custom_container.dart';
 
 class OnBoarding6 extends StatelessWidget {
@@ -29,7 +30,9 @@ class OnBoarding6 extends StatelessWidget {
             bottom: 0,
             child: CustomContainer(
                 title: 'Start Watching Now',
-                onClickFristButton: () {},
+                onClickFristButton: () {
+                  Navigator.pushNamed(context, RoutesManger.signIn);
+                },
                 titleInFristButton: 'Finish',
               titleInSecoundButton: 'Back',
               onClickSecoundButton: (){

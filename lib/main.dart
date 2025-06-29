@@ -7,4 +7,3 @@ void main()async {
 
   runApp( MovieApp());
 }
-

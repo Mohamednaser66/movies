@@ -15,7 +15,7 @@ class MovieApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           routes: RoutesManger.routes,
-          initialRoute: RoutesManger.onBoarding1,
+          initialRoute: RoutesManger.signUp,
           debugShowCheckedModeBanner: false,
           theme: ThemeManger.light,
           darkTheme: ThemeManger.dark,

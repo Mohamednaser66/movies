@@ -4,6 +4,9 @@ import 'package:movie/presentation/on_boarding/on_boarding2.dart';
 import 'package:movie/presentation/on_boarding/on_boarding3.dart';
 import 'package:movie/presentation/on_boarding/on_boarding6.dart';
 
+import '../authentication/rest_oassword/rest_password.dart';
+import '../authentication/sign_in/signin.dart';
+import '../authentication/sign_up/signup.dart';
 import '../presentation/on_boarding/on_boarding4.dart';
 import '../presentation/on_boarding/on_boarding5.dart';
 
@@ -14,6 +17,9 @@ class RoutesManger {
   static String onBoarding4 = '/onBoarding4';
   static String onBoarding5 = '/onBoarding5';
   static String onBoarding6 = '/onBoarding6';
+  static String signIn = '/signIn';
+  static String signUp = '/signUp';
+  static String resrtPassword = '/resrtPassword';
   static Map<String, WidgetBuilder> routes = {
     onBoarding1: (_) => OnBoarding1(),
     onBoarding2: (_) => OnBoarding2(),
@@ -21,5 +27,8 @@ class RoutesManger {
     onBoarding4: (_) => OnBoarding4(),
     onBoarding5: (_) => OnBoarding5(),
     onBoarding6: (_) => OnBoarding6(),
+    signIn: (_) => SignIn(),
+    signUp: (_) => SignUp(),
+    resrtPassword: (_) => RestPassWard(),
   };
 }

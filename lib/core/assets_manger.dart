@@ -5,4 +5,12 @@ class ImagesManger {
   static String onBoarding4 = 'assets/images/on_boarding_4.png';
   static String onBoarding5 = 'assets/images/on_boarding5.png';
   static String onBoarding6 = 'assets/images/on_boarding6.png';
+  static String signInLogo = 'assets/images/logo_signin.png';
+  static String  forgetPassword = 'assets/images/rest_password.png';
+}
+class svgManger{
+
+  static String google = 'assets/images/🦆 icon _google_.svg';
+
+
 }
