@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Dialogs {
+
   static showLoadingDialog(BuildContext context, String? loadingMessage) {
     showDialog(
         context: context,
@@ -29,32 +30,33 @@ class Dialogs {
       VoidCallback? posAction,
       VoidCallback? negAction}) {
     List<Widget> actions = [];
-    if (posTitle != null) {
-      actions.add(TextButton(
-          onPressed: () {
-            posAction?.call();
-                        hideDialog(context);
+   if (posTitle != null) {
+  actions.add(TextButton(
+    onPressed: () {
+      posAction;
+      hideDialog(context);
+    },
+    child: Text(posTitle),
+  ));
+}
 
-          },
-          child: Text(posTitle)));
-    } else if (negTitle != null) {
-      actions.add(TextButton(
-          onPressed: () {
-           
-            negAction?.call();
-             hideDialog(context);
-          },
-          child: Text(negTitle)));
-    }
+if (negTitle != null) {
+  actions.add(TextButton(
+    onPressed: () {
+      negAction?.call();
+      hideDialog(context);
+    },
+    child: Text(negTitle),
+  ));
+}
     showDialog(
         context: context,
         builder: (_) {
           return CupertinoAlertDialog(
             actions: actions,
-            content: Column(
-              children: [Text(message)],
-            ),
+            content: Text(message),
           );
         });
   }
 }
+

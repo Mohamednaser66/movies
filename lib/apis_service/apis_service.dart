@@ -7,8 +7,8 @@ import '../authentication/sign_up/data/user_regester_request.dart';
 import '../authentication/sign_up/data/user_regester_response.dart';
 
 class ApisService {
-  static Future<Either<UserRegisterResponse, String>> regesterUser(
-    
+  static Future<Either<UserRegisterResponse , String>> regesterUser(
+
       UserRegesterRequest request) async {
     String baseUrl = 'https://route-movie-apis.vercel.app/';
     String regesterEndPoint = 'auth/register';
@@ -21,8 +21,8 @@ class ApisService {
         },
         body: jsonEncode(request.toJson()),
       );
-      print(response.statusCode);
-      print(response.body);
+      // print(response.statusCode);
+      // print(response.body);
 
       var json = jsonDecode(response.body);
       UserRegisterResponse userResponse = UserRegisterResponse.fromJson(json);

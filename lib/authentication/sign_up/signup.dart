@@ -67,81 +67,83 @@ class _SignUpState extends State<SignUp> {
             builder: (context, myProvider, child) {
               return Padding(
                 padding: REdgeInsets.symmetric(horizontal: 16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    SizedBox(
-                      height: 120.h,
-                    ),
-                    CustomTextFormFiled(
-                        controller: controllerName,
-                        title: 'Name',
-                        preffixIcon: Icons.account_box_rounded),
-                    SizedBox(
-                      height: 16.h,
-                    ),
-                    CustomTextFormFiled(
-                        controller: controllerEmail,
-                        title: 'Email',
-                        preffixIcon: Icons.email_sharp),
-                    SizedBox(
-                      height: 16.h,
-                    ),
-                    CustomTextFormFiled(
-                      controller: controllerPassword,
-                      title: 'Password',
-                      preffixIcon: Icons.lock,
-                      onClick: myProvider.clickPassword,
-                      isSecure: myProvider.isSecure,
-                      suffixIcon: myProvider.isSecure
-                          ? Icons.visibility_off
-                          : Icons.visibility,
-                    ),
-                    SizedBox(
-                      height: 16.h,
-                    ),
-                    CustomTextFormFiled(
-                      controller: controllerConfirmPassword,
-                      title: 'ConfirmPassword',
-                      preffixIcon: Icons.lock,
-                      onClick: myProvider.clickConfirmPassword,
-                      isSecure: myProvider.confirmPassword,
-                      suffixIcon: myProvider.confirmPassword
-                          ? Icons.visibility_off
-                          : Icons.visibility,
-                    ),
-                    SizedBox(
-                      height: 16.h,
-                    ),
-                    CustomTextFormFiled(
-                      controller: controllerPhone,
-                      title: 'phone',
-                      preffixIcon: Icons.phone,
-                    ),
-                    SizedBox(
-                      height: 16.h,
-                    ),
-                    CustomElvatedButton(
-                        title: 'Create Account', onClick: _onClick),
-                    SizedBox(
-                      height: 17.h,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Already Have Account?',
-                          style: Theme.of(context).textTheme.titleSmall,
-                        ),
-                        CustomTextButton(
-                          title: 'login',
-                          onClick: () {
-                            Navigator.pushNamed(context, RoutesManger.signIn);
-                          },
-                        )
-                      ],
-                    )
-                  ],
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      SizedBox(
+                        height: 120.h,
+                      ),
+                      CustomTextFormFiled(
+                          controller: controllerName,
+                          title: 'Name',
+                          preffixIcon: Icons.account_box_rounded),
+                      SizedBox(
+                        height: 16.h,
+                      ),
+                      CustomTextFormFiled(
+                          controller: controllerEmail,
+                          title: 'Email',
+                          preffixIcon: Icons.email_sharp),
+                      SizedBox(
+                        height: 16.h,
+                      ),
+                      CustomTextFormFiled(
+                        controller: controllerPassword,
+                        title: 'Password',
+                        preffixIcon: Icons.lock,
+                        onClick: myProvider.clickPassword,
+                        isSecure: myProvider.isSecure,
+                        suffixIcon: myProvider.isSecure
+                            ? Icons.visibility_off
+                            : Icons.visibility,
+                      ),
+                      SizedBox(
+                        height: 16.h,
+                      ),
+                      CustomTextFormFiled(
+                        controller: controllerConfirmPassword,
+                        title: 'ConfirmPassword',
+                        preffixIcon: Icons.lock,
+                        onClick: myProvider.clickConfirmPassword,
+                        isSecure: myProvider.confirmPassword,
+                        suffixIcon: myProvider.confirmPassword
+                            ? Icons.visibility_off
+                            : Icons.visibility,
+                      ),
+                      SizedBox(
+                        height: 16.h,
+                      ),
+                      CustomTextFormFiled(
+                        controller: controllerPhone,
+                        title: 'Phone',
+                        preffixIcon: Icons.phone,
+                      ),
+                      SizedBox(
+                        height: 16.h,
+                      ),
+                      CustomElvatedButton(
+                          title: 'Create Account', onClick: _onClick),
+                      SizedBox(
+                        height: 17.h,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Already Have Account?',
+                            style: Theme.of(context).textTheme.titleSmall,
+                          ),
+                          CustomTextButton(
+                            title: 'login',
+                            onClick: () {
+                              Navigator.pushNamed(context, RoutesManger.signIn);
+                            },
+                          )
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               );
             },
@@ -151,7 +153,7 @@ class _SignUpState extends State<SignUp> {
     );
   }
 
-  void _onClick() async {
+  void _onClick()  {
     UserRegesterRequest request = UserRegesterRequest(
       name: controllerName.text,
       email: controllerEmail.text,
