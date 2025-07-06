@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie/presentation/main_layout/main_layout.dart';
 import 'package:movie/presentation/on_boarding/on_boarding1.dart';
 import 'package:movie/presentation/on_boarding/on_boarding2.dart';
 import 'package:movie/presentation/on_boarding/on_boarding3.dart';
@@ -20,6 +21,7 @@ class RoutesManger {
   static String signIn = '/signIn';
   static String signUp = '/signUp';
   static String resrtPassword = '/resrtPassword';
+  static String mainLayout = '/mainLayout';
   static Map<String, WidgetBuilder> routes = {
     onBoarding1: (_) => OnBoarding1(),
     onBoarding2: (_) => OnBoarding2(),
@@ -30,5 +32,6 @@ class RoutesManger {
     signIn: (_) => SignIn(),
     signUp: (_) => SignUp(),
     resrtPassword: (_) => RestPassWard(),
+    mainLayout: (_) => MainLayout(),
   };
 }

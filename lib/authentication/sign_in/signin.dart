@@ -93,7 +93,7 @@ class _SignInState extends State<SignIn> {
                     height: 28.h,
                   ),
                   CustomElvatedButton(
-                      image: svgManger.google,
+                      image: SvgManger.google,
                       title: 'Login With Google',
                       onClick: () {})
                 ],

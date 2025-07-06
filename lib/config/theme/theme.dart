@@ -6,6 +6,17 @@ import 'package:google_fonts/google_fonts.dart';
 class ThemeManger {
   static ThemeData light = ThemeData();
   static ThemeData dark = ThemeData(
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        selectedItemColor: ColorsManger.yellow,
+        unselectedItemColor: ColorsManger.white,
+        selectedIconTheme:IconThemeData(
+          color: ColorsManger.yellow
+        ),
+        backgroundColor: ColorsManger.dark,
+        selectedLabelStyle: TextStyle(color: ColorsManger.yellow,fontSize: 12,fontWeight: FontWeight.w400),
+        unselectedLabelStyle: TextStyle(color: ColorsManger.white,fontSize: 12,fontWeight: FontWeight.w400),
+        type: BottomNavigationBarType.fixed,
+      ),
       appBarTheme: AppBarTheme(
           centerTitle: true,
           iconTheme: IconThemeData(color: ColorsManger.yellow),
