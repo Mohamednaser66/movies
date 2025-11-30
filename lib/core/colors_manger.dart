@@ -7,4 +7,5 @@ class ColorsManger {
   static Color white = Color(0xffFFFFFF);
   static Color green = Color(0xff57AA53);
   static Color red = Color(0xffE82626);
+  static Color ofWhite = Color(0xffADADAD);
 }

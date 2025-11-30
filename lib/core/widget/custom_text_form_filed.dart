@@ -6,22 +6,26 @@ class CustomTextFormFiled extends StatelessWidget {
   CustomTextFormFiled(
       {super.key,
       required this.title,
-      required this.preffixIcon,
+      required this.prefixIcon,
       this.suffixIcon,
       this.isSecure = false,
       this.controller,
-      this.onClick});
+      this.onClick,
+      this.validation});
 
   final TextEditingController? controller;
   final String title;
   final IconData? suffixIcon;
-  final IconData preffixIcon;
+  final Widget? prefixIcon;
   final VoidCallback? onClick;
   bool isSecure;
+  FormFieldValidator<String>? validation;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      autovalidateMode:AutovalidateMode.onUserInteraction,
+      validator:validation ,
       controller: controller,
       cursorColor: ColorsManger.white,
       obscureText: isSecure,
@@ -33,10 +37,7 @@ class CustomTextFormFiled extends StatelessWidget {
       decoration: InputDecoration(
           hintText: title,
           hintStyle: Theme.of(context).textTheme.titleSmall,
-          prefixIcon: Icon(
-            preffixIcon,
-            color: Theme.of(context).iconTheme.color,
-          ),
+          prefixIcon: prefixIcon,
           suffixIcon: IconButton(
               onPressed: onClick,
               icon: Icon(
