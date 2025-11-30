@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:movie/authentication/presentation/sign_in/signin.dart';
+import 'package:movie/authentication/presentation/sign_up/signup.dart';
+import 'package:movie/presentation/main_layout/details_screen/details_screen.dart';
 import 'package:movie/presentation/main_layout/main_layout.dart';
+import 'package:movie/presentation/main_layout/tabs/profile/presentation/screens/reset_password.dart';
+import 'package:movie/presentation/main_layout/tabs/profile/presentation/screens/update_profile.dart';
 import 'package:movie/presentation/on_boarding/on_boarding1.dart';
 import 'package:movie/presentation/on_boarding/on_boarding2.dart';
 import 'package:movie/presentation/on_boarding/on_boarding3.dart';
 import 'package:movie/presentation/on_boarding/on_boarding6.dart';
-
-import '../authentication/rest_oassword/rest_password.dart';
-import '../authentication/sign_in/signin.dart';
-import '../authentication/sign_up/signup.dart';
+import '../authentication/presentation/forget_password/forget_password.dart';
 import '../presentation/on_boarding/on_boarding4.dart';
 import '../presentation/on_boarding/on_boarding5.dart';
 
@@ -20,8 +22,11 @@ class RoutesManger {
   static String onBoarding6 = '/onBoarding6';
   static String signIn = '/signIn';
   static String signUp = '/signUp';
-  static String resrtPassword = '/resrtPassword';
+  static String forgetPassword = '/forgetPassword';
   static String mainLayout = '/mainLayout';
+  static String movieDetails = '/movieDetails';
+  static String updateProfile = '/updateProfile';
+  static String resetPassword = '/resetPassword';
   static Map<String, WidgetBuilder> routes = {
     onBoarding1: (_) => OnBoarding1(),
     onBoarding2: (_) => OnBoarding2(),
@@ -31,7 +36,10 @@ class RoutesManger {
     onBoarding6: (_) => OnBoarding6(),
     signIn: (_) => SignIn(),
     signUp: (_) => SignUp(),
-    resrtPassword: (_) => RestPassWard(),
+    forgetPassword: (_) => ForgetPassWard(),
     mainLayout: (_) => MainLayout(),
+    movieDetails: (_) =>DetailsScreen(),
+    updateProfile: (_) =>UpdateProfile(),
+    resetPassword:(_) =>ResetPassword()
   };
 }

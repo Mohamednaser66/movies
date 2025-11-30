@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-class CustomElvatedButton extends StatelessWidget {
-  const CustomElvatedButton({
+class CustomElevatedButton extends StatelessWidget {
+  const CustomElevatedButton({
     super.key,
     required this.title,
     required this.onClick,
@@ -24,11 +24,11 @@ class CustomElvatedButton extends StatelessWidget {
           SvgPicture.asset(image!, height: 24),
           SizedBox(width: 8),
         ],
-        Flexible( // أو Expanded لو تحب
+        Flexible(
           child: Text(
             title,
             style: Theme.of(context).textTheme.labelMedium,
-            overflow: TextOverflow.ellipsis, // ← يمنع كسر التصميم
+            overflow: TextOverflow.ellipsis,
             softWrap: false,
           ),
         ),

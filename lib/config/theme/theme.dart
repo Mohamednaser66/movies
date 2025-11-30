@@ -6,13 +6,19 @@ import 'package:google_fonts/google_fonts.dart';
 class ThemeManger {
   static ThemeData light = ThemeData();
   static ThemeData dark = ThemeData(
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+        foregroundColor: ColorsManger.white,
+        textStyle: GoogleFonts.roboto(fontSize: 20.sp,fontWeight: FontWeight.w400)
+      )
+    ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         selectedItemColor: ColorsManger.yellow,
         unselectedItemColor: ColorsManger.white,
         selectedIconTheme:IconThemeData(
           color: ColorsManger.yellow
         ),
-        backgroundColor: ColorsManger.dark,
+        backgroundColor: ColorsManger.grey,
         selectedLabelStyle: TextStyle(color: ColorsManger.yellow,fontSize: 12,fontWeight: FontWeight.w400),
         unselectedLabelStyle: TextStyle(color: ColorsManger.white,fontSize: 12,fontWeight: FontWeight.w400),
         type: BottomNavigationBarType.fixed,
@@ -28,6 +34,7 @@ class ThemeManger {
           )),
       iconTheme: IconThemeData(color: ColorsManger.white),
       inputDecorationTheme: InputDecorationTheme(
+        prefixIconColor: ColorsManger.white,
         filled: true,
         fillColor: ColorsManger.grey,
         enabledBorder: OutlineInputBorder(
@@ -84,5 +91,7 @@ class ThemeManger {
             color: ColorsManger.white,
             fontWeight: FontWeight.w400,
             fontSize: 20.sp),
+        bodyMedium: GoogleFonts.roboto(fontWeight: FontWeight.w700,fontSize: 20.sp,color: ColorsManger.ofWhite),
+        bodyLarge: GoogleFonts.roboto(fontSize: 36.sp,fontWeight: FontWeight.w700,color: ColorsManger.white)
       ));
 }

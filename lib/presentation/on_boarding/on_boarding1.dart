@@ -49,7 +49,7 @@ class OnBoarding1 extends StatelessWidget {
                     "Get access to a huge library of movies to suit all tastes. You will surely like it.",
                     style: Theme.of(context).textTheme.labelSmall),
                 SizedBox(height: 24.h),
-                CustomElvatedButton(title: 'Explore Next', onClick: () {
+                CustomElevatedButton(title: 'Explore Next', onClick: () {
                   Navigator.pushNamed(context, RoutesManger.onBoarding2);
                 })
               ],

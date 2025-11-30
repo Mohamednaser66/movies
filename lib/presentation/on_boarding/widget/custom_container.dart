@@ -50,7 +50,7 @@ class CustomContainer extends StatelessWidget {
               style: Theme.of(context).textTheme.titleMedium,
             ),
             SizedBox(height: 16.h),
-            CustomElvatedButton(
+            CustomElevatedButton(
               title: titleInFristButton,
               onClick: onClickFristButton,
             ),
