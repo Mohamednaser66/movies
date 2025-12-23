@@ -1,6 +1,55 @@
 # movie
+Movie App is a Flutter application that allows users to explore movies, browse categories, view movie details,browse by genres,
+and manage favorites and discover trending and popular films using a clean and modern UI.
 
-A new Flutter project.
+# Features
+
+🔥 Browse trending and popular movies
+
+🎭 Movies by genre
+
+🔍 Search for movies
+
+📄 Movie details (overview, rating, release date, poster)
+
+❤️ Add / remove movies from favorites
+
+🕒 View recently watched movies
+
+🌙 Clean and user-friendly UI
+
+📱 Responsive design (mobile-friendly)
+
+# Project Structure
+lib/
+
+│── core/
+
+│── data/
+
+│── domain/
+
+│── presentation/
+
+│── main.dart
+
+
+data → API & models
+
+domain → business logic
+
+presentation → UI & state management
+
+# State Management
+
+This project uses Bloc / Cubit to handle:
+
+Movie fetching
+
+Loading & error states
+
+Favorites & history
+# Screenshots
 
 ## Getting Started
 
